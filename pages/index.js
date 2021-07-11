@@ -1,9 +1,9 @@
 import Head from "next/head";
 import ArticleList from "../components/ArticleList";
 import styles from "../styles/Home.module.css";
+import { server } from "../config";
 
 export default function Home({ articles }) {
-  console.log(articles);
   return (
     <div>
         <ArticleList articles={articles} />
@@ -11,15 +11,11 @@ export default function Home({ articles }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=6`
-  );
+export const getStaticProps = async (context) => {
+  const res = await fetch(`${server}/api/articles`);
   const articles = await res.json();
 
   return {
-    props: {
-      articles,
-    },
+    props: { articles },
   };
 };

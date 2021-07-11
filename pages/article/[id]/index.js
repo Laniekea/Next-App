@@ -15,33 +15,33 @@ const article = ({ article }) => {
   );
 };
 
-export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  );
+// export const getStaticProps = async (context) => {
+//   const res = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+//   );
 
-  const article = await res.json();
+//   const article = await res.json();
 
-  return {
-    props: { article },
-  };
-};
+//   return {
+//     props: { article },
+//   };
+// };
 
-export const getStaticPaths = async () => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts`
-  );
+// export const getStaticPaths = async () => {
+//   const res = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts`
+//   );
 
-  const articles = await res.json();
+//   const articles = await res.json();
 
-  const ids = articles.map((article) => article.id)
+//   const ids = articles.map((article) => article.id)
 
-  const paths = ids.map((id) => ({params: {id: id.toString()}}))
+//   const paths = ids.map((id) => ({params: {id: id.toString()}}))
 
-  return {
-    paths, 
-    fallback: false // data dont exist
-  }
-}
+//   return {
+//     paths, 
+//     fallback: false // data dont exist
+//   }
+// }
 
 export default article;

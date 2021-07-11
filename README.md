@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). [`Next.js Crash Course 2021 by Traversy Media`](https://www.youtube.com/watch?v=mTz0GXj8NN0&t=2078s).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), referring to [`Next.js Crash Course 2021 by Traversy Media`](https://www.youtube.com/watch?v=mTz0GXj8NN0&t=2078s).
 
 ## Getting Started
 
